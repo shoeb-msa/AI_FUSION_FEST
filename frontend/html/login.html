@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/login.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    
+    <form id="loginForm">
+        <h1>Log in</h1>
+        <input type="email" id="username" placeholder="username" required>
+        <i class='bx bxs-user'></i>
+        <br>
+        <br>
+        <input type="password" id="password" placeholder="password" required>
+        <i class="bx bxs-lock-alt"></i>
+        <br>
+        <div class="forgot">
+            <br>
+            <label>
+                <input type="checkbox" style="height: 20px; width: 20px;"> Remember me
+            </label>
+            <a href="./password.html" class="pass">forgot password</a>
+        </div>
+                
+        <button type="submit">Log in</button>
+        <br>
+        <div class="regis">
+            <p>Don't have any account? <a href="./sign.html" class="register">register</a></p>
+        </div>
+        <br>
+        <button type="button"><a href="./first.html">Back</a></button>
+    </form>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            
+            
+            localStorage.setItem('username', username);
+            localStorage.setItem('password', password);
+            
+            window.location.href = 'phishing.html';
+        });
+    </script>
+</body>
+</html>

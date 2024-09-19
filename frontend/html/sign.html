@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/sign.css">
+</head>
+<body>
+    
+    <form id="signUpForm">
+        <h1>Sign Up</h1>
+        <input type="text" id="username" placeholder="username" required>
+        <br><br>
+        
+        <input type="email" id="email" placeholder="Email id" required>
+        <br><br>
+        
+        <input type="password" id="password" placeholder="password" required>
+        <br>
+        
+        <div class="forgot">
+            <br>
+        </div>
+        
+        <button type="submit">Sign up</button>
+        
+        <div class="log">
+            <p>Have an account? <a href="./login.html" class="log_in">Log in</a></p>
+        </div>
+        
+        <h3 class="h3"><a href="./login.html">BACK</a></h3>
+    </form>
+    <br>
+
+    <script>
+        document.getElementById('signUpForm').addEventListener('submit', function(e) {
+            e.preventDefault();  // Prevent form submission
+            
+            // Get the values from the input fields
+            const username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            
+            // Store the values in local storage
+            localStorage.setItem('username', username);
+            localStorage.setItem('email', email);
+            localStorage.setItem('password', password);
+            
+            // Redirect to the login page after successful sign-up
+            window.location.href = 'login.html';
+        });
+    </script>
+</body>
+</html>

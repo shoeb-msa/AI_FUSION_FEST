@@ -1,0 +1,83 @@
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgb(177, 36, 36);
+    background-image: url(blog-featured-line-phishing-site-1c-945x495-1.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+button{
+    color: rgba(21, 26, 121, 0.739);
+    
+    font-size: 40px;
+   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    background-color: rgba(234, 53, 53, 0.775);
+    border: none; /* Remove default border */
+    border-radius: 8px; /* Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+input {
+    color: rgb(123, 14, 159);
+    font-size: 30px; 
+    width: 400px;
+    padding: 22px; 
+    border-radius: 100px;
+    position: relative;
+}
+button{
+    background-color: rgb(30, 19, 47);
+    color: aqua;
+    border-radius: 25px;
+    font-size: 30px;
+    width: 300px;
+    padding: 20px;
+}
+a{
+    color: rgb(233, 235, 231);
+}
+button:hover{
+    background-color: rgba(37, 24, 22, 0.786);
+}
+
+
+.forgot{
+    display: flex;
+    justify-content: space-between;
+    font-size: 25px;
+    margin: 15px;
+}
+form{
+    background-color: rgba(203, 174, 174, 0.957);
+    padding: 50px;
+    border-radius: 30px;
+    text-align: center;
+
+}
+.regis{
+    font-size: 30px;
+}
+.register:hover{
+    color: rgb(97, 97, 177);
+}
+
+.pass:hover{
+    color: rgb(89, 89, 181);
+}
+a{
+    text-decoration: none;
+}
+i{
+    position: relative;
+    font-size: 44px;
+    text-align: center;
+    width: 20px;
+    color: rgb(110, 64, 58);
+   
+}

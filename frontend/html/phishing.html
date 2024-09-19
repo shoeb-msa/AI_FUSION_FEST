@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Detector</title>
+    <link rel="stylesheet" href="../css/phishing.css">
+</head>
+<body>
+    <form id="phishingForm">
+        <h3 class="WELCOME">Phishing Website Detector</h3>
+        <h5>Check a URL:</h5>
+        <input type="text" id="urlInput" placeholder="Enter URL to check" required>
+        <button type="submit">Check URL</button>
+        <p id="result">
+            
+        </p>
+    </form>
+    <h2></h2>
+    <form action="">
+    <button class="awareness">
+        <a href="./Phishing_Awareness.html" style="color: black; text-decoration: none;">
+            Phishing Awareness
+        </a>
+    </button>
+    <br>
+    <button><a href="./login.html" style="color: black;">BACK</a></button>
+</form>
+    <br>
+
+
+
+    <script>
+        document.getElementById('phishingForm').addEventListener('submit', async function(e) {
+            e.preventDefault();  // Prevent the form from submitting normally
+            const url = document.getElementById('urlInput').value;
+            const resultElement = document.getElementById('result');
+
+            try {
+                const response = await fetch('http://127.0.0.1:5000/predict', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ features: extractFeatures(url) }),
+                });
+
+                const data = await response.json();
+                resultElement.textContent = data.prediction === 1 ? 'Phishing detected!' : 'Error detecting URL.';
+            } catch (error) {
+                console.error('Error:', error);
+                resultElement.textContent = 'This URL is safe.';
+            }
+        });
+
+        function extractFeatures(url) {
+            return [
+                url.length,                   // URL length
+                (url.match(/\./g) || []).length - 1, // Subdomain count
+                url.startsWith('https://') ? 1 : 0,  // HTTPS presence
+            ];
+        }
+    </script>
+
+   
+</body>
+</html>

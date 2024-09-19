@@ -1,0 +1,119 @@
+body{
+    background-color: rgb(24, 24, 21);
+    background-image: url(bf9d540b4df108c43a1f8e617b6bf23d.jpg);
+    background-repeat: no-repeat;
+    background-size: 1700px;
+}
+h1{
+    text-align: center;
+    background-color: black;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    border-width: 3px;
+    border-style: groove;
+    border-color: #f0f0f0;
+}
+
+h4
+{
+    color: rgb(199, 191, 206);
+}
+
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    height: 300px;
+    cursor: pointer;
+    
+}
+.img {
+    border: 5px solid rgb(167, 167, 187);
+    transition: border-color 0.3s 
+}
+
+.img:hover {
+    border-color: red; /* Changes the border color to red when hovering */
+}
+
+
+.about_me{
+    
+    color: rgb(241, 240, 242);
+    background-color: rgba(8, 8, 8, 0.605);
+    width: 220px;
+    font-size: 40px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.me{
+    color: rgb(239, 236, 241);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.643);
+}
+#comment{
+    text-align: center;
+}
+.ll:hover
+{
+    color: aliceblue;
+    background-color: black;
+}
+.input:hover
+{
+    background-color: rgb(112, 174, 228);
+    color: rgb(4, 11, 6);
+}
+
+.back{
+    text-align: center;
+    font-size: 30px;
+    background-color: rgb(212, 188, 188);
+    color: white;
+    width: 100px;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.back:hover{
+    background-color: rgb(245, 248, 250);
+}
+
+.photo-gallery {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 20px;
+    background-color: #493d3d;
+    scroll-behavior: smooth; 
+}
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.photo-gallery::-webkit-scrollbar{
+    height: 8px; 
+}
+
+.photo-gallery::-webkit-scrollbar-thumb{
+    background: rgba(0, 0, 0, 0.5); 
+    border-radius: 6px; 
+}
+.photo-gallery::-webkit-scrollbar-track{
+    background: #f0f0f0; 
+}
+
+img{
+    flex: 0 0 auto; 
+    margin-right: 10px;
+}
